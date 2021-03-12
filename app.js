@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
 
     //welcome 
     socket.broadcast.to(room).emit("message", messageFormat("ChatBot", `${username} entered the chat`,null ))
-    socket.emit("message", messageFormat("ChatBot", "Welcome to ChatChord", room));
+    socket.emit("message", messageFormat("ChatBot", "Welcome to ChatCord", room));
     io.to(room).emit("users", getUsers(room));
 
     //message logic
